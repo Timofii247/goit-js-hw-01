@@ -1,11 +1,11 @@
-let content = "50px";
-let padding = "8px";
-let border = "4px";
+function getElementWidth(content, padding, border) {
+  const contentWidth = parseFloat(content);
+  const totalPadding = parseFloat(padding) * 2;
+  const totalBorder = parseFloat(border) * 2;
 
-let contentWidth = parseFloat(content); 
-let totalPadding = parseFloat(padding) * 2;
-let totalBorder = parseFloat(border) * 2;
+  return contentWidth + totalPadding + totalBorder;
+}
 
-let totalWidth = contentWidth + totalPadding + totalBorder;
-
-console.log(totalWidth);
+console.log(getElementWidth("50px", "8px", "4px")); 
+console.log(getElementWidth("60px", "12px", "8.5px"));
+console.log(getElementWidth("200px", "0px", "0px"));

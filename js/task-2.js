@@ -1,14 +1,7 @@
-let country1 = "Australia";
-let price1 = 120;
-let deliveryFee1 = 50;
-console.log("Shipping to " + country1 + " will cost " + (price1 + deliveryFee1) + " credits");
+function getShippingMessage(country, price, deliveryFee) {
+  return "Shipping to " + country + " will cost " + (price + deliveryFee) + " credits";
+}
 
-let country2 = "Germany";
-let price2 = 80;
-let deliveryFee2 = 20;
-console.log("Shipping to " + country2 + " will cost " + (price2 + deliveryFee2) + " credits");
-
-let country3 = "Sweden";
-let price3 = 100;
-let deliveryFee3 = 20;
-console.log("Shipping to " + country3 + " will cost " + (price3 + deliveryFee3) + " credits");
+console.log(getShippingMessage("Australia", 120, 50));
+console.log(getShippingMessage("Germany", 80, 20));    
+console.log(getShippingMessage("Sweden", 100, 20)); 
